@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    kata00.py                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+         #
+#    By: imanol <imanol@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/09 15:50:16 by ide-la-i          #+#    #+#              #
-#    Updated: 2023/02/09 15:54:55 by ide-la-i         ###   ########.fr        #
+#    Updated: 2023/02/09 19:52:11 by imanol           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,9 @@ import sys
 # Put this at the top of your kata00.py file
 kata = (19,42,21)
 
-def print_kata(kata):
-	print(f"The 3 numbers are: {kata[0]}, {kata[1]}, {kata[2]}")
-
 def main():
-	print_kata(kata)
+	kata_tuple = tuple(kata)
+	print(f"The 3 numbers are: {kata_tuple[0]}, {kata_tuple[1]}, {kata_tuple[2]}")
 
 if __name__ == '__main__':
 	sys.exit(main())
