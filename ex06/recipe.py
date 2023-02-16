@@ -6,15 +6,23 @@
 #    By: ide-la-i <ide-la-i@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 11:41:41 by ide-la-i          #+#    #+#              #
-#    Updated: 2023/02/16 09:16:26 by ide-la-i         ###   ########.fr        #
+#    Updated: 2023/02/16 14:29:51 by ide-la-i         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 import sys
 
-cookbook = {'sandwich': {'ingredients': 'ham, bread, cheese and tomatoes', 'type': 'lunch', 'time': '10'},
-		'cake': {'ingredients': 'flour, sugar and eggs', 'type': 'dessert', 'time': '60'},
-		'salad': {'ingredients': 'avocado, arugula, tomatoes and spinach', 'type': 'lunch', 'time': '15'}}
+cookbook = {
+	'sandwich': {'ingredients': 'ham, bread, cheese and tomatoes', 'type': 'lunch', 'time': '10'},
+	'cake': {'ingredients': 'flour, sugar and eggs', 'type': 'dessert', 'time': '60'},
+	'salad': {'ingredients': 'avocado, arugula, tomatoes and spinach', 'type': 'lunch', 'time': '15'}
+	}
+
+def add_recipe():
+	print("not yet")
+
+def delete_recipe():
+	print("not yet")
 
 def get_user_imput():
 	print("""List of available options:
@@ -29,9 +37,9 @@ def get_user_imput():
 
 def print_recipe():
 	recipe_choice = input("Please enter a recipe name to get its details:\n")
-	for key in cookbook:
+	for key, values in cookbook.items():
 		if key == recipe_choice:
-			print(key)
+			print(key, values)
 			return 1
 	print("No recipe found for that item. Check spelling and try again, or add it yourself if missing.")
 	
